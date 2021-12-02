@@ -4,21 +4,13 @@ import Thing.Ball;
 import Thing.Force;
 
 public class Space {
-    public int N;//球的数量
     public Ball[] balls;
-    public Force[] forces;
-    public Space(int N){
-        this.N = N;
-        this.balls = new Ball[N];
-        this.forces = new Force[N-1];
-        //创建N个Ball实例，属性为具体传参。
-        for(int i = 0; i<N ; i++){
-            // balls[i] = new Ball();
-        }
+    public Force[][] forces;
 
-        for (int i =0; i<N-1; i++){
-            forces[i] = new Force(balls[i] , balls[i+1]);
-        }
+    public Space(Ball[] balls, Force[][] forces, int BoaldLength){
+        this.balls = balls;
+        this.forces = forces;
+
     }
 
     public double getDistance(Ball ball1 , Ball ball2){
