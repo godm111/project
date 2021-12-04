@@ -18,11 +18,7 @@ public class GameRun extends Thread{
 
         while(true) {
 
-            if(Ball.ballstate) {
-
                 gameView.repaint();
-                boaldTop.boaldMove();
-                boaldDown.boaldMove();
                 ball.ballMove();
 
                 try {
@@ -38,4 +34,3 @@ public class GameRun extends Thread{
         }
     }
 
-}
